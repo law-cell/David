@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <persistence version="2.1"
+               xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="model" transaction-type="RESOURCE_LOCAL">
+    <class>com.murex.retail.model.component.ComputerComponent</class>
+    <class>com.murex.retail.model.component.Processor</class>
+    <class>com.murex.retail.model.component.Monitor</class>
+    <class>com.murex.retail.model.component.Peripheral</class>
+    <class>com.murex.retail.model.component.Memory</class>
+    <class>com.murex.retail.model.component.ExternalMemory</class>
+    <class>com.murex.retail.model.order.Order</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.connection.url" value="jdbc:h2:mem:computer_component;DB_CLOSE_DELAY=-1"/>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="root"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
